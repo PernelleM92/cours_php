@@ -50,11 +50,19 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    04 et 05 -Get et Post
+                    04- Get
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="../04_get/method_get.php.php">Get</a>
-                            <a class="dropdown-item" href="../05_post/method_post.php.php">Post</a>
+                            <a class="dropdown-item" href="../04_get/method_get.php">Get</a>
+                            <a class="dropdown-item" href="../04_get/02_method_get.php">02Get</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    05- Post
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../05_post/method_post.php">Post</a>
                             
                         </div>
                     </li>
@@ -65,6 +73,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="../00_exos/01_exos.php">EXERCICES</a>
                             <a class="dropdown-item" href="../00_exos/02_exos.php">EXERCICES Tableaux</a>
+                            <a class="dropdown-item" href="../00_exos/03_exos_form.php">EXERCICES form</a>
+                            <a class="dropdown-item" href="../00_exos/03_form_traitement.php">EXERCICES form traitement</a>
                             
                             
                         </div>

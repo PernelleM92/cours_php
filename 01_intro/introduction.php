@@ -21,7 +21,7 @@
         <p class="lead"><p class="lead">On retrouve dans PHP la plupart des instructions de contrôle des scripts. Indispensables à la gestion du déroulement d'un algorithme quelconque, ces instructions sont présentes dans tous les langages. PHP utilise une syntaxe très proche de celle du langage C. Ceux qui ont déjà pratiqué un langage tel que le C ou plus simplement JavaScript seront en pays de connaissance.</p></p>
         <hr class="my-4">
         
-        <a class="btn btn-primary btn-lg" href="../01_intro/infos.php" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="../01_intro/infos.php" role="button">PHP Version 7.2.19</a>
     </div>
 
 

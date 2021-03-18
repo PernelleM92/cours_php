@@ -105,10 +105,40 @@ foreach($contacts as $indice => $valeur){
       echo "<h3>".$valeur."</h3>";  
     }else{
         echo "<p>".$valeur."</p>";
-    }
+    };
     
-}
+};
+//1 - EXo faire un tableau $tailles avec des tailles de vêtements du small au xl et les afficher avec une boucle foreach dans une ul
+//2 - puis les afficher dans un select avec une boucle foreach
 
+$tailles = array (
+    'small' => 'S - Small',
+    'medium' => 'M - Medium',
+    'large' => 'L - Large',
+    'extralarge' => 'Xl - Extra-Large',
+);
+
+jevardump($tailles);
+
+echo "<ul>";
+foreach ($tailles as $indices => $sizes){
+    echo "<li>".$sizes. "</li>";
+}
+echo "</ul>";
+
+$tailles2 = [
+    "S" => "small",
+    "M" => "medium",
+    "L" => "large",
+    "XL" => "extra-large"
+];
+
+
+echo "<select class=_\"form-control w-25\">";
+foreach ($tailles2 as $indices2 => $sizes2){
+    echo "<option>" .$indices2. " pour ".$sizes2. "</option>";
+}
+echo "</select>";
 
 ?> 
 <!-- Optional JavaScript; choose one of the two! -->

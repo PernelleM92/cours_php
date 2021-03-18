@@ -24,7 +24,7 @@
     <div class="container bg-white p-5">
         <div class="row jumbotron bg-light">
             <div class="col-sm-12">
-                <h1 class="text-center">Cours PHP 7 - La méthode GET</h1>
+                <h1 class="text-center">Cours PHP 7 - La méthode GET2</h1>
                 <p class="lead text-center mt-4">$_GET[] représente les données qui transitenrt par l'URL</p>
             </div>
         </div><!-- fin row -->
@@ -36,20 +36,44 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2>$_GET[]</h2>
-                    <p>Il s'agit d'une superglobale et comme toutes les superglobales, c'est un tableau</p>
-                    <p>Upeeglobale signifie que cette variable est disponible partout dans le script, y compris au sein des fonctions</p>
-                    <p>Les informations transitent dans l'url selon la syntaxe suivante <code>mapage.php?indice1=valeur1&indiceN=valeurN</code></p>
-                    <p>Et enfin</p>
-                    <p>Et enfin, qund on récupere les données, $_GET[] se remplit selon le schéma suivant : <code>$_GET = array ('indice1' => 'valeur1', 'indiceN' => 'valeurN'</code></p>
-                </div><!-- fin de col-->
+                <?php
+                //jevardump($_GET)
+                //isset est-ce que l'on a bien tous les indices du tableau
+                if(isset($_GET['article']) && isset($_GET['couleur']) && isset($_GET['pric'])) {
+                    echo $_GET['articlr']; // oui on les affiche le produit
+                }else {
+                    echo "Désolé, il n'y a pas de produit sur cette page !"
+                };
+                ?>
 
-                <div class="col-sm-12 col-md-6">
-                <!-- à partir du ? on envoie des informations via l'url à la page 02_method_get.php et elles sont receptionnée par la superglobale -->
-                    <a href="02_method_get.php?article=jean&couleur=bleu&prix=55">Jean bleu</a>
-                    <a href="02_method_get.php?article=robe&couleur=rouge&prix=75">Robe rouge</a>
-                    <a href="02_method_get.php?article=pull&couleur=blanc&prix=45">Pull blanc</a>
+                    
+                </div><!-- fin de col -->
+                <div class="col-sm-12">
+              <?php 
+                if(isset($_GET['article']) && isset($_GET['couleur']) && isset($_GET['prix'])) { // je fabrique la card si j'ai bien les contenus de mon array $_GET  
+                ?>         
+            <div class="card" style="width: 18rem;">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <?php 
+                        echo $_GET['article'];
+                        ?> 
+                    </h5>
+                    <p class="card-text">
+                        <?php echo $_GET['couleur']. "<br>" .$_GET['prix']. " €"; ?>
+                    </p>
+                    <a href="panier.php" class="btn btn-primary">Mettre au panier</a>
                 </div>
+            </div>
+            <!-- fin card      -->
+            <?php
+                } else { //sinon je fabrique un simple p
+                    echo "<p>Désolé il n'y a pas de produit sur cette page !</p>"; 
+                } 
+                ?> 
+            </div>
+            <!-- fin col -->
      
             </div><!-- fin de row -->
         

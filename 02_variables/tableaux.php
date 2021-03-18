@@ -75,7 +75,7 @@
 
       <div class="col-sm-12">
       <h2>Les tableaux multidimensionnels</h2>
-      <p>Un tableau multi-dimensionnel est un tableau qui contiendra une suite de tableau</p>
+      <p>Un tableau multi-dimensionnel est un tableau qui contiendra une suite de tableau Chaque tableau présente une dimension</p>
       <?php 
       $tableau_multi = array(
         0 => array(
@@ -94,12 +94,25 @@
         )
       );
 
-      jeprintr($tableau_multi)
+      jeprintr($tableau_multi);
+
       //pour afficher Burna
       echo "Burna";
       echo $tableau_multi[0]['prenom']; // Pour afficher Burna on entre d'abord l'indice 0 puis dans le sous-tableau on va à l'indice prenom
 
+      //Pour parcourir le tableau multi-dimensionnel on peut faire une boucle for car ses indices sont numériques
 
+      echo "<ul>";
+      for ($i=0; $i < count($tableau_multi);$i++){
+        echo "<li>" .$tableau_multi[$i]['nom']." ".$tableau_multi[$i]['prenom']."</li>";
+      }
+      echo "</ul>";
+
+      // Faire un foreach pour avoir les indices de notre tableau.
+      echo "<p>";
+      foreach ( $tableau_multi as $indice => $prenom){
+        echo $tableau_multi[$indice]['prenom'];
+      }
       ?> 
 
         
